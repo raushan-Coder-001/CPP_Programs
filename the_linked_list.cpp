@@ -198,3 +198,17 @@ int main()
     cout<<endl<<"No. of elements in linked list = "<<ll.count();
     return 0;
 }
+
+/* 
+There are following points would help us to understand the program better:
+    a) The individual data items and links are represented by structure of type 'node'.
+        Each such node contains an integer and a pointer to the pointer to the next node in the linked list.
+    b) The structure pointer p always points to hte first node in the linked list. When the list is empty p contains NULL
+    C) In addition to the constructor and destructor there are six more function in the class. There names and purpose :
+        1) append() = Adds a new node beyond the last node in the linked list
+        2) addatbeg() = Adds a new node at the beginning of the linked list.
+        3) addafter() = Inserts a new node after a specific node in the linked list.
+        4) display() = Displays the data present in each node in the linked list.
+        5) count() = Counts the number of nodes present in the linked list
+        6) del() = Deletes a specified node from the linked list .
+        */
