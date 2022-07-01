@@ -1,6 +1,6 @@
  //maximum of four intergers
 
- #include<bits/stdc++.h>
+ #include<iostream>
  using namespace std;
 
  int maxoffour(int a,int b,int c,int d)

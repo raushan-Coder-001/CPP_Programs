@@ -1,27 +1,32 @@
- #include<bits/stdc++.h>
+ #include<iostream>
  using namespace std;
- 
-class Solution {
-    public:
-        int pivotIndex(vector<int>& nums) {
-            vector<int> sum_left = nums, sum_right = nums;
-            for(int i = 1; i < sum_left.size(); ++i) {
-                sum_left[i] += sum_left[i-1];
-            }
-            for(int i = sum_right.size() - 2; i >= 0; --i) {
-                sum_right[i] += sum_right[i+1];
-            }
-            for(int i = 0; i < nums.size(); ++i) {
-                if(sum_left[i] == sum_right[i]) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-};
 
-int main()
-{
-   
-   return 0;
-}
+
+/* Pivot is the smallest element in array .
+ It is a way for binary search of smallest element so that the time 
+complexity of this is O(logn) */
+ int getPivot (int arr[], int size) {
+    
+    int s = 0, e = size - 1, mid = s + (e - s)/2 ;
+
+    while (s < e)
+    {
+        if (arr[mid] >= arr[0])
+        {
+            s = mid + 1;
+        }
+        else{
+            e = mid;
+        }
+        mid = s + (e - s)/2;
+    }
+    return s;
+ }
+
+ int main()
+ {
+    int arr[6] = {5,4,7,9,1,44};
+
+    cout << "Index of pivot element is "<< getPivot(arr,6);
+    return 0;
+ }
