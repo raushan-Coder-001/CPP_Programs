@@ -26,6 +26,21 @@
     cout << ptr << endl;
     ptr+=1;
     cout << ptr << endl;
+
+
+    // In case of string it will print whole string insted of first character.
+
+    char ch[6] = "abcde";
+    cout << "The string is --> " << ch << endl;
+
+    char *c = &ch[0];
+    // prints entire string
+    cout << c << endl;
+
+    char temp = 'z';
+    char *ptr1 = &temp;
+    cout << ptr1 << endl; // It will continue printing elements till it finds a null intity.
+   
     
     return 0;
  }
