@@ -10,7 +10,7 @@
     if(n == 1) 
         return 1;
     
-    // recursive relation
+    // recursive relation  It has linear time complexity
     int ans = fib(n-1) + fib(n-2);
     return ans;
  }

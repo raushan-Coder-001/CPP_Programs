@@ -10,4 +10,5 @@ int main(){
  int *ptr = &num;
  increment(&ptr);
  cout << num << endl;
+ return 0;
 }

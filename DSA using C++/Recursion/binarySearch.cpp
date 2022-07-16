@@ -1,9 +1,16 @@
  #include <iostream>
  using namespace std;
 
+ void print(int *arr, int s, int e) {
+    for(int i = s; i <= e; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+ }
+
  
  bool binarySearch(int *arr, int s, int e, int key) {
-
+    print(arr,s,e);
     // base case 
 
     // element not found
@@ -29,6 +36,12 @@
  int main() {
     int arr[5] = {1,2,3,4,5};
     int key = 5;
-    cout << "Present or not --> " << binarySearch(arr,0,4,key);
+    bool ans = binarySearch(arr,0,4,key);
+    if(ans) {
+        cout << "Key is present.";
+    }
+    else {
+        cout << "Key is absent.";
+    }
     return 0;
  }
